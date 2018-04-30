@@ -1,0 +1,96 @@
+Airbnb NY
+================
+Rodrigo Valdes Ortiz
+4/29/2018
+
+General issues
+--------------
+
+``` r
+# Load data
+listings = read.csv("listings_graph.csv", header=TRUE, sep=",")
+listings = listings[listings$review_scores_rating <= 95,] ## I will focus on those who can improve
+f_importance = read.csv("feature_importance.csv", header=TRUE, sep=",")
+
+# Create some categorical variables
+listings$verifications_cat <-cut(listings$host_verifications, c(0,3,6,9,13), 
+                                 labels=c("   (0-3]   ", "   (3-6]   ", "   (6-9]   ", "   (9-13]   "))
+```
+
+``` r
+# Main theme
+blank_theme <- theme_minimal()+
+  theme(
+  panel.border = element_blank(),
+  panel.grid=element_blank(),
+  axis.ticks = element_blank(),
+  plot.title=element_text(size=14, face="bold")
+  )
+```
+
+Visualization 1: Is there descriptive evidence of factors that might affect review's scores?
+============================================================================================
+
+``` r
+## Visualization 1 ##
+
+# Give the order of the factors
+listings$cancellation_policy <- factor(listings$cancellation_policy, c('flexible', 'moderate', 'strict', '+strict', '++strict'))
+listings$host_response_time <- factor(listings$host_response_time, c('< 1 hour', 'hours','1 day', 'days'))
+
+# Graph about cancellation policy
+cancellation = ggplot(listings, aes(factor(cancellation_policy), 
+                                    review_scores_rating, fill = cancellation_policy)) +
+  geom_bar(stat = "summary", fun.y = "mean", position = "dodge") + 
+  blank_theme +
+  labs(x = "Cancellation policy", y = "Reviews rating") + 
+  theme(legend.position = "none", 
+        axis.text.x = element_text(colour="grey20",size=6.5, angle=90, face="bold"),
+        axis.title.x = element_text(colour="grey20",size=9, face="bold"))
+
+# Graph about respond time
+respond_time = ggplot(listings, aes(factor(host_response_time), review_scores_rating, fill = host_response_time)) +
+  geom_bar(stat = "summary", fun.y = "mean", position = "dodge") + 
+  blank_theme +
+  labs(x = "Host response time", y = "") + 
+  theme(legend.position = "none",
+        axis.text.x = element_text(colour="grey20",size=7.5, angle=90, face="bold"),
+        axis.title.x = element_text(colour="grey20",size=9, face="bold"))
+
+# Graph about number of identity verifications of the host
+verifications = ggplot(listings, aes(verifications_cat, review_scores_rating, fill = verifications_cat)) +
+  geom_bar(stat = "summary", fun.y = "mean", position = "dodge") + 
+  blank_theme +
+  labs(x = "Number of host verifications", y = "") + 
+  theme(legend.position = "none", 
+        axis.text.x = element_text(colour="grey20",size=7.7, angle=90, face="bold"),
+        axis.title.x = element_text(colour="grey20",size=9, face="bold", margin = margin(b=4)))
+
+ggarrange(cancellation, respond_time, verifications, ncol = 3, nrow = 1)
+```
+
+![](Visual_files/figure-markdown_github/unnamed-chunk-3-1.png)
+
+Visualization 2: Feature Importance
+===================================
+
+``` r
+## Visualization 2
+
+f_importance$feature <- factor(f_importance$feature, f_importance$feature)
+
+ggplot(f_importance, aes(x=feature)) +
+  geom_bar(aes(y=importance), position="dodge",stat="identity", fill="royalblue2")  + blank_theme + 
+  theme(legend.position = "none") +
+  labs(x = "Feature", y = "Importance") +
+  ggtitle("Most import features") +
+  coord_flip() +
+  theme(legend.position = "none", 
+        axis.text.x = element_text(colour="grey20",size=10, angle=0, face="plain"),
+        axis.text.y = element_text(colour="grey20",size=10, angle=0, face="bold"),
+        axis.title.x = element_text(colour="grey20",size=12, face="bold"),
+        axis.title.y = element_text(colour="grey20",size=12, face="bold"),
+        plot.title = element_text(hjust = 0.5))
+```
+
+![](Visual_files/figure-markdown_github/unnamed-chunk-4-1.png)
