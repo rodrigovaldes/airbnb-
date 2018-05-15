@@ -21,11 +21,11 @@ To explore this visually, I create two word clouds.
 
 ### Words in positive reviews
 
-![](images/positive_words.png)
+![](images/positive_words.png?raw=true)
 
 ### Words in negative reviews
 
-![](images/negative_words.png)
+![](images/negative_words.png?raw=true)
 
 **Positive reviews: the emphasis is in New York**, the host, the location, and the place.
 
