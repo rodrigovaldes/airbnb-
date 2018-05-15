@@ -87,16 +87,16 @@ Now, I present the most interesting weights from this model.
 
 According to the analysis of the weights, and reading the actual text of the reviews, there are some patterns in bad comments from the guests:
 
-**I. Find a place that does not look as it was depicted. **
+**I. Find a place that does not look as it was depicted.**
 
 -   For instance, "huge room with spectacular view," but the guest describe the room as "small and dark without a view to the street."
 
-**II. The bathroom. **
+**II. The bathroom.**
 
 -   Cleanliness
 -   Not working
 
-**III. Cleanliness. **
+**III. Cleanliness.**
 
 -   Dirty common spaces
 -   Guest are asked to clean what they did not use
