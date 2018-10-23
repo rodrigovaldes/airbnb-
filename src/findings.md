@@ -42,46 +42,47 @@ Now, I present the most interesting weights from this model.
 
 ### Words associated with positive reviews
 
-| weight |      word     |
-|--------|:-------------:|
-| 2.78   |  'definitely' |
-| 2.21   |    'great'    |
-| 2.11   |   'perfect'   |
-| 2.06   |    'super'    |
-| 2.03   |  'everything' |
-| 2.01   |  'recommend'  |
-| 1.95   |    'subway'   |
-| 1.71   | 'comfortable' |
-| 1.65   |    'hosts'    |
-| 1.62   |  'fantastic'  |
-| 1.57   |  'beautiful'  |
-| 1.51   |     'walk'    |
-| 1.44   |  'Manhattan'  |
-| 1.43   |    'clean'    |
-| 1.32   |     'view'    |
+| weight |     word     |
+|--------|:------------:|
+| 4.23   | 'definitely' |
+| 3.71   |   'perfect'  |
+| 3.53   |    'super'   |
+| 3.40   |     'We'     |
+| 2.83   |  'wonderful' |
+| 2.82   |     'New'    |
+| 2.43   |    'great'   |
+| 2.38   |  'Manhattan' |
+| 2.38   |    'clean'   |
+| 2.33   |  'recommend' |
+| 2.30   |    'loved'   |
+| 2.17   |    'here'    |
+| 2.17   |   'subway'   |
+| 2.06   |    'room'    |
+| 2.05   | 'everything' |
+| 2.01   |    'home'    |
 
 ### Words associated with negative reviews
 
-| weight |      word     |
-|--------|:-------------:|
-| 5.55   |     'not'     |
-| 3.06   |      'no'     |
-| 2.63   |     'good'    |
-| 2.39   |     'but'     |
-| 1.93   |   'bathroom'  |
-| 1.55   |     'Good'    |
-| 1.29   |    'didnt'    |
-| 1.21   |    'sleep'    |
-| 1.15   |    'people'   |
-| 1.06   | 'reservation' |
-| 1.03   |     'East'    |
-| 0.99   |    'dirty'    |
-| 0.99   |    'small'    |
-| 0.95   |     'old'     |
-| 0.94   |    'living'   |
-| 0.92   |     'what'    |
-| 0.92   |    'where'    |
-| 0.87   |     'pour'    |
+| weight |    word    |
+|--------|:----------:|
+| 8.26   |    'not'   |
+| 4.60   |    'no'    |
+| 3.87   |    'we'    |
+| 3.28   |   'good'   |
+| 2.56   |    'host   |
+| 2.09   |   'dirty'  |
+| 1.90   |   'quite'  |
+| 1.71   |   'floor'  |
+| 1.66   |    'pas'   |
+| 1.60   |   'wasnt'  |
+| 1.58   |   'night'  |
+| 1.42   |   'didnt'  |
+| 1.41   |    'but'   |
+| 1.40   |  'friends' |
+| 1.40   |  'people'  |
+| 1.17   |   'sleep'  |
+| 1.16   | 'bathroom' |
+| 1.12   |   'beds'   |
 
 ### Conclusions from the model
 
