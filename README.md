@@ -2,9 +2,8 @@
 
 ## For a quick view of the general results, please check:
 
-* visual_exp.md
-* findings.md
-
+* [Exploratory analysis](https://github.com/rodrigovaldes/airbnb-/blob/master/src/visual_exp.md)
+* [NLP findings](https://github.com/rodrigovaldes/airbnb-/blob/master/src/findings.md)
 
 ## The analysis was made in two phases:
 
