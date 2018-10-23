@@ -127,3 +127,7 @@ An interesting finding of the exploratory analysis and the model is that **the a
 This model helps to understand the reasons behind positive and negative reviews. However, **further research is needed to understand the nuances in this data**. For instance, are there different patterns of reviews according to the nationality of the guest? Which are the specific necessities of leisure and business travellers?
 
 In addition, the data only provides the aggregated score by spot – the average of guests' reviews. Then, **data which contains scores per each guest review will clarify reasons behind positive and negative reviews.**
+
+------------------------------------------------------------------------
+
+Return to the main repo [here](https://github.com/rodrigovaldes/airbnb-).

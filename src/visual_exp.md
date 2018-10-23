@@ -16,3 +16,7 @@ Visualization 2: Feature Importance
 According to a preliminary analysis of a random forest model, the most important features to increase your score are the number of reviews, reviews per month, super host, and host listings count. However, many of these variables are correlated with the experience of the host. Then, a more profound analysis is needed. This plot generates two hypothesis: **1) time and experience increase your score, 2) only excellent host stay on the platform for a long time, 3) strategies to increase your number of visits and reviews might have positive effects.**
 
 ![](visual_exp_files/figure-markdown_github/unnamed-chunk-4-1.png)
+
+------------------------------------------------------------------------
+
+Return to the main repo [here](https://github.com/rodrigovaldes/airbnb-).
