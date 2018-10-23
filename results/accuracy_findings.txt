@@ -1,0 +1,6 @@
+ ############# base ############# 
+The accuracy in the DEV set is: 0.8225
+The accuracy in the DEV_TEST is: 0.8175
+ ############# hinge ############# 
+The accuracy in the DEV set is: 0.8175
+The accuracy in the DEV_TEST is: 0.82
