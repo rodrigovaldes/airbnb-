@@ -36,9 +36,9 @@ Conclusion: in **positive** reviews customers remember the **city**. However, th
 Classification model
 --------------------
 
-To analyze this claim analytically, I trained a classification model based on text. The accuracy of this model is 0.8 in the development set, and 0.78 in the development test set. Then, this model increases the accuracy more than 50% against random.
+To analyze this claim analytically, I trained a classification model based on text. The accuracy of this model is 0.82 in the development set, and 0.82 in the development test set. Then, the accuracy of the model is 64% bigger than random.
 
-Now, I present the most interesting weights from this model.
+Please find below the most interesting weights of the model.
 
 ### Words associated with positive reviews
 
@@ -86,23 +86,44 @@ Now, I present the most interesting weights from this model.
 
 ### Conclusions from the model
 
-According to the analysis of the weights, and reading the actual text of the reviews, there are some patterns in bad comments from the guests:
+According to the analysis of the weights, and reading the actual text of the reviews, there are patterns in the reviews of low score spots:
 
-**I. Find a place that does not look as it was depicted.**
+**I. Guests find a place that does not look as it was depicted.**
 
--   For instance, "huge room with spectacular view," but the guest describe the room as "small and dark without a view to the street."
+-   For instance, "huge room with spectacular view," but the guest describe the room as "small and dark without a view to the street"
+-   Some of the most important weights for negative reviews are contrasting words, such as no, not, pas (no in French), and but
 
 **II. The bathroom.**
 
 -   Cleanliness
 -   Not working
+-   Weights of this claim: bathroom, dirty, no, and not
 
 **III. Cleanliness.**
 
 -   Dirty common spaces
 -   Guest are asked to clean what they did not use
+-   Associated weights: beds, floor, dirty, no, and not
 
 **IV. Difficulties to sleep.**
 
 -   Noise
 -   Habits of the hosts
+-   For instance, guests complain about parties of the host, people in the apartment, and noise during the night.
+-   Some of the weights are host, night, friend, and people
+
+Recommendations for hosts trying to increase its score
+------------------------------------------------------
+
+1.  Describe your spot nicely but accurately.
+2.  When you have guest, clean the common areas and bathrooms. Your guest might have different cleaning standards that you.
+3.  Avoid hassles for your guest, such as organizing parties when they want to sleep. Also, you might want to clarify quiet hours –or the lack of those– in your posting.
+
+Final remarks
+-------------
+
+An interesting finding of the exploratory analysis and the model is that **the apartment in less important than the city in positive reviews**. In positive reviews, people talk about the city, hosts, location, and public transportation. However, in negative reviews, the pitfalls in the apartment opaque the city, host, or location.
+
+This model helps to understand the reasons behind positive and negative reviews. However, **further research is needed to understand the nuances in this data**. For instance, are there different patterns of reviews according to the nationality of the guest? Which are the specific necessities of leisure and business travellers?
+
+In addition, the data only provides the aggregated score by spot – the average of guests' reviews. Then, **data which contains scores per each guest review will clarify reasons behind positive and negative reviews.**
