@@ -13,7 +13,7 @@
 
 2. NLP classification model to identify the words related to positive and negative reviews
   + Code in nlp_1.py, nlp_2.py, text_an.py, and nlp_main.py
-  + To execute this phase, just run nlp_nain.py
+  + To execute this phase, just run nlp_main.py
   + Visualizations in src/findings.Rmd
 
 ## Data
